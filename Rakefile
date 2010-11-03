@@ -14,7 +14,7 @@ task :default => :test
 
 desc "Run all spec files"
 Spec::Rake::SpecTask.new("spec") do |t|
-  t.pattern = "*spec.rb"
+  t.pattern = "spec/*spec.rb"
   t.spec_opts << rspec_formatter_defaults
   t.fail_on_error = false
 end
@@ -22,5 +22,5 @@ end
 desc "Start Selenium Server in singleswindow mode"
 task :'rc:start' do
   puts "** Selenium Server started in single-window mode"
-  `java -jar ../selenium_server/selenium-server.jar -singlewindow -browserSessionReuse`
+  `java -jar selenium_server/selenium-server.jar -singlewindow -browserSessionReuse`
 end
