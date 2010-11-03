@@ -1,0 +1,58 @@
+Driving Selenium With Ruby
+(Bonus: yes, Windows Ruby devs DO exist!)
+
+== Selenium is... ==
+* a set of web browser automation tools
+* Supports many browsers (Firefox, IE, Safari, Opera, Chrome)
+* Has wrapper libraries for many languages (C#, Java, Ruby and more!)
+
+== Why did we start using Selenium? ==
+* We make web applications
+* We have weird legacy code, no good way to test besides through the browser
+* Motto: We don't do manual testing!
+* In rails: JavaScript
+
+== Why might you not want to use Selenium? ==
+* Opening and using a browser is slow (x min vs y min with capybara+rack-test)
+* Might be overkill
+* Can be brittle
+* Still can't do subjective testing like "page looks pretty"
+
+== In Ruby ==
+* selenium-rc + selenium-client
+vs
+* selenium-webdriver (aka selenium 2.0. different framework => different api)
+(also selenium-ide and selenium-grid, out of scope)
+plus
+* Test harness of your choice (RSpec supports creating nice reports)
+
+== Selenium RC is ==
+
+== Selenium client is ==
+
+== Setup ==
+Skipping! What works for us will be up on my github.
+
+== Use ==
+.open
+.click
+:wait_for (ajax)
+.type
+.is_text_present
+supported locators
+
+== Demo == 
+* Make video for backup
+
+== Reports ==
+* With screenshots!
+
+== Things that are tricky ==
+* Opening new windows
+* JS dialogs
+
+== More? ==
+* http://seleniumhq.org
+* http://selenium-client.rubyforge.org/
+* https://groups.google.com/group/selenium-users
+* http://github.org/carolclarinet/...
