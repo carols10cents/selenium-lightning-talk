@@ -8,13 +8,13 @@ Driving Selenium With Ruby
 
 == Why did we start using Selenium? ==
 * We make web applications
-* We have weird legacy code, no good way to test besides through the browser
+* We have legacy code in a custom XML lang, no good way to test besides through the browser
 * Motto: We don't do manual testing!
 * In rails: JavaScript
 
 == Why might you not want to use Selenium? ==
 * Opening and using a browser is slow (x min vs y min with capybara+rack-test)
-* Might be overkill
+* Might be overkill, like view specs can be
 * Can be brittle
 * Still can't do subjective testing like "page looks pretty"
 
