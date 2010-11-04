@@ -19,6 +19,20 @@ Spec::Rake::SpecTask.new("spec") do |t|
   t.fail_on_error = false
 end
 
+desc "Run the simple spec files"
+Spec::Rake::SpecTask.new("simple") do |t|
+  t.pattern = "spec/simple*spec.rb"
+  t.spec_opts << rspec_formatter_defaults
+  t.fail_on_error = false
+end
+
+desc "Run the failing spec files"
+Spec::Rake::SpecTask.new("fail") do |t|
+  t.pattern = "spec/fail*spec.rb"
+  t.spec_opts << rspec_formatter_defaults
+  t.fail_on_error = false
+end
+
 desc "Start Selenium Server in singleswindow mode"
 task :'rc:start' do
   puts "** Selenium Server started in single-window mode"
