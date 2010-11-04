@@ -21,14 +21,17 @@ Driving Selenium With Ruby
 == In Ruby ==
 * selenium-rc + selenium-client
 vs
-* selenium-webdriver (aka selenium 2.0. different framework => different api)
+* selenium-webdriver (aka selenium 2.0, a merge with webdriver. different framework => different api)
 (also selenium-ide and selenium-grid, out of scope)
 plus
 * Test harness of your choice (RSpec supports creating nice reports)
 
-== Selenium RC is ==
+== Selenium RC ==
+* is written in java
+* runs the browser by injecting JS
 
 == Selenium client is ==
+* one of many 
 
 == Setup ==
 Skipping! What works for us will be up on my github.
