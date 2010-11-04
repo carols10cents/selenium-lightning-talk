@@ -13,7 +13,7 @@ Driving Selenium With Ruby
 * In rails: JavaScript
 
 == Why might you not want to use Selenium? ==
-* Opening and using a browser is slow (x min vs y min with capybara+rack-test)
+* Opening and using a browser is slow (x min vs 1 min 15 s with capybara+rack-test)
 * Might be overkill, like view specs can be
 * Can be brittle
 * Still can't do subjective testing like "page looks pretty"
@@ -22,19 +22,8 @@ Driving Selenium With Ruby
 * selenium-rc + selenium-client
 vs
 * selenium-webdriver (aka selenium 2.0, a merge with webdriver. different framework => different api)
-(also selenium-ide and selenium-grid, out of scope)
 plus
 * Test harness of your choice (RSpec supports creating nice reports)
-
-== Selenium RC ==
-* is written in java
-* runs the browser by injecting JS
-
-== Selenium client is ==
-* one of many 
-
-== Setup ==
-Skipping! What works for us will be up on my github.
 
 == Use ==
 .open

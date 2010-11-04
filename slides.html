@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Driving Selenium using Ruby</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20050728" />
+<meta name="author" content="Eric A. Meyer" />
+<meta name="company" content="Complex Spiral Consulting" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>PghRB, 4 Nov 2010</h1>
+<h2>Driving Selenium using Ruby</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Driving Selenium using Ruby</h1>
+<h2>also: Windows Ruby Devs Do Exist!</h2>
+<h3>Carol Nichols</h3>
+</div>
+
+<div class="slide">
+<h1>Selenium is...</h1>
+<ul>
+<li>A set of browser automation tools</li>
+<li>Can drive: 
+<div>
+<img src="ui/images/browser_logos-64.png" /> and more!
+</div>
+</li>
+<li>Can be driven using:
+<div>
+  <img src="ui/images/ruby.jpg" /><img src="ui/images/java.jpg" width="50" />, C# and more!
+</div>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>Why we started using Selenium</h1>
+  <ul>
+    <li>We make web applications that we wanted to test</li>
+    <li>No good way to test these besides in the browser (not rails)</li>
+    <li>Motto: We don't do manual testing!</li>
+    <li>When in Rails: to test JavaScript</li>
+    <li>Full stack integration testing</li>
+    <li>Fun to watch the green movie</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Why you might not want to use Selenium</h1>
+  <ul>
+    <li>Opening and using a browser is slow compared to capybara+rack-test</li>
+    <li>Might be overkill, like view specs can be</li>
+    <li>Can be brittle</li>
+    <li>Still can't do subjective testing like "page looks pretty"</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>In Ruby: Tools</h1>
+  <ul>
+    <li>selenium-rc java tool + selenium-client gem</li>
+  </ul>
+  <div style="margin-left: 8%; margin-top: 2%;">OR</div>
+  <ul>
+    <li>selenium-webdriver gem (aka selenium 2.0, a merge with webdriver)</li>
+  </ul>
+  <div style="margin-left: 8%; margin-top: 2%;">PLUS</div>
+  <ul>
+    <li>Test harness of your choice (RSpec supports creating nice reports)</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Ways to control the browser</h1>
+  <ul>
+    <li>.open</li>
+    <li>Locators of different types</li>
+    <li>.click</li>
+    <li>.type/.check/.select (form interactions)</li>
+    <li>.wait_for</li>
+    <li>... and more, see Selenium::Client::GeneratedDriver and Selenium::Client::Idiomatic
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Ways to test outcomes</h1>
+  <ul>
+    <li>get_text, is_text_present</li>
+    <li>is_element_present, get_xpath_count</li>
+    <li>is_visible</li>
+    <li>checked?, is_editable</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Demo time!</h1>
+  <ul>
+    <li>Simple passing spec (spec/simple_spec.rb, rake simple)</li>
+    <li>Simple failing spec to demo reports (spec/fail_spec.rb, rake fail)</li>
+    <li>Using JavaScript (spec/simple_js_spec.rb, rake simple)</li>
+    <li>Reports will be in reports/test_report.html
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>Resources</h1>
+  <ul>
+    <li>This presentation and all code/tools used are in my GitHub: <a href=""></a></li>
+    <li><a href="http://seleniumhq.org">Documentation for all Selenium tools</a></li>
+    <li><a href="http://selenium-client.rubyforge.org/">Ruby selenium-client gem's rdoc</a></li>
+    <li><a href="https://groups.google.com/group/selenium-users">Selenium users google group</a></li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
