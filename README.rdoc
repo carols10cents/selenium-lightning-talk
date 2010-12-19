@@ -1,0 +1,35 @@
+This is the material I used for a lightning talk on driving Selenium with Ruby I gave at the Pittsburgh Ruby Brigade meeting on Nov 4, 2010. The contents of this repository should be enough to get Selenium tests up and running quickly for you to be able to give it a try.
+
+In particular, this setup is useful for testing any web-based interface (as opposed to only those created with Rails).
+
+Please feel free to contact me with any questions about Selenium! @Carols10Cents on twitter, or carol dot nichols at gmail.
+
+HTML slide framework courtesy of Eric Meyer's S5 project.
+
+== Prerequisites
+
+Using the contents of this repository requires:
+* Ruby (tested with 1.8.7)
+* rspec (tested with 1.3.0)
+* selenium-client (tested with 1.2.18)
+
+== Running the included tests
+
+Start the Selenium Remote Control server in one terminal:
+
+    rake rc:start
+
+In another terminal, run the tests by doing:
+
+    rake simple
+
+The expected output is a number of specs that succeeded from RSpec (unless vivisimo.com changes, I'd expect them all to pass).
+
+== Running your tests
+To run tests against your code instead, you'd need to change the following:
+
+* In spec/spec_helper.rb, in the create_selenium_driver method, change the application_url from http://vivisimo.com to what you're going to be testing against. This has to do with getting around browser cross-site scripting restrictions. In the setup we actually use, this gets set from an environment variable so that we don't have to edit this file to test a different website, just change the environment variable.
+* Instead of the other spec/*_spec.rb files that I have, write tests for your site. The {selenium-client rdocs}[http://selenium-client.rubyforge.org/], in particular the methods on Selenium::Client::GeneratedDriver and Selenium::Client::Idiomatic, explain all the different user actions you can do with selenium.
+* In the Rakefile, you might want to modify some of the RSpec options and the tasks that run different sets of spec files to suit your workflow.
+
+The contents of the selenium-server directory in the github repo are the selenium-server jars that you can also download from {seleniumhq.org}[http://seleniumhq.org/projects/remote-control/] (I took out the javadocs that they include in the download).
